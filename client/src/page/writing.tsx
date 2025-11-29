@@ -14,7 +14,7 @@ import {headersWithAuth} from "../utils/auth";
 import {Cache} from '../utils/cache';
 import {siteName} from "../utils/constants";
 import mermaid from 'mermaid';
-import { MarkdownEditor } from '../components/markdown_editor';
+import { RichMarkdownEditor } from '../components/editor';
 
 async function publish({
   title,
@@ -315,7 +315,7 @@ export function WritingPage({ id }: { id?: number }) {
         <div className="col-span-2 pb-8">
           <div className="bg-w rounded-2xl shadow-xl shadow-light p-4">
             {MetaInput({ className: "visible md:hidden mb-8" })}
-            <MarkdownEditor content={content} setContent={setContent} height='600px' />
+            <RichMarkdownEditor content={content} setContent={setContent} height='500px' />
           </div>
           <div className="visible md:hidden flex flex-row justify-center mt-8">
             <button
